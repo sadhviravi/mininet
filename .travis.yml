@@ -4,9 +4,6 @@ sudo: required
 matrix:
   include:
     - dist: trusty
-      python: 2.7
-      env: dist="14.04 LTS trusty"
-    - dist: trusty
       python: 3.6
       env: dist="14.04 LTS trusty"
 
@@ -24,7 +21,7 @@ script:
 - alias sudo="sudo env PATH=$PATH"
 - export PYTHON=`which python`
 - echo 'px import sys; print(sys.version_info)' | sudo $PYTHON bin/mn -v output
-- sudo $PYTHON bin/mn --test iperf
+- sudo $PYTHON bin/mn --topo=tree,3,3 --test pingall
 
 notifications:
   email:
