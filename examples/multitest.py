@@ -23,7 +23,6 @@ if __name__ == '__main__':
     info( "*** Creating network\n" )
     network = Mininet( TreeTopo( depth=2, fanout=2 ))
      #                 , switch=OVSKernelSwitch )
-    hosts = network.hosts
     info( "*** Starting network\n" )
     network.start()
     info( "*** Running ping test\n" )
