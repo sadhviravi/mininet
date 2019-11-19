@@ -21,10 +21,4 @@ script:
 - alias sudo="sudo env PATH=$PATH"
 - export PYTHON=`which python`
 - echo 'px import sys; print(sys.version_info)' | sudo $PYTHON bin/mn -v output
-- sudo $PYTHON bin/mn
-
-notifications:
-  email:
-    on_success: never
-
-# More details: https://docs.travis-ci.com/user/notifications
+- sudo $PYTHON examples/multitest.py
