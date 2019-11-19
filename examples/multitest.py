@@ -18,11 +18,12 @@ def ifconfigTest( net ):
         info( host.cmd( 'ifconfig' ) )
 
 if __name__ == '__main__':
-    lg.setLogLevel( 'info' )
-    info( "*** Initializing Mininet and kernel modules\n" )
-    OVSKernelSwitch.setup()
+#    lg.setLogLevel( 'info' )
+ #   info( "*** Initializing Mininet and kernel modules\n" )
+ #   OVSKernelSwitch.setup()
     info( "*** Creating network\n" )
-    network = Mininet( TreeTopo( depth=2, fanout=2 ), switch=OVSKernelSwitch )
+    network = Mininet( TreeTopo( depth=2, fanout=2 ))
+     #                 , switch=OVSKernelSwitch )
     info( "*** Starting network\n" )
     network.start()
     info( "*** Running ping test\n" )
