@@ -31,6 +31,8 @@ if __name__ == '__main__':
     info( "*** Running ifconfig test\n" )
    # ifconfigTest( network )
     info( "*** Starting CLI (type 'exit' to exit)\n" )
+    output(network.delLink('h1s1'))
+    network.pingAll()
     CLI( network )
     info( "*** Stopping network\n" )
     network.stop()
