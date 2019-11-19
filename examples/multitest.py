@@ -28,9 +28,6 @@ if __name__ == '__main__':
     network.start()
     info( "*** Running ping test\n" )
     network.pingAll()
-    hosts = network.hosts
-    for host in hosts:
-        info(host.cmd('ifconfig'))
     info( "*** Running ifconfig test\n" )
     ifconfigTest( network )
     info( "*** Starting CLI (type 'exit' to exit)\n" )
