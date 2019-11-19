@@ -14,7 +14,7 @@ def ifconfigTest( net ):
     "Run ifconfig on all hosts in net."
     hosts = net.hosts
     for host in hosts:
-        output( host.cmd( 'ifconfig' ) )
+        output(host.cmd( 'ifconfig' ))
     
 if __name__ == '__main__':
     info( "*** Creating network\n" )
