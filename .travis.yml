@@ -22,3 +22,7 @@ script:
 - export PYTHON=`which python`
 - echo 'px import sys; print(sys.version_info)' | sudo $PYTHON bin/mn -v output
 - sudo $PYTHON examples/multitest.py
+
+notifications:
+  email:
+    on_success: never
