@@ -6,9 +6,8 @@ For a more complicated test example, see udpbwtest.py.
 """
 
 from mininet.cli import CLI
-from mininet.log import lg, info
+from mininet.log import info
 from mininet.net import Mininet
-from mininet.node import OVSKernelSwitch
 from mininet.topolib import TreeTopo
 
 def ifconfigTest( net ):
