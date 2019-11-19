@@ -8,7 +8,7 @@ For a more complicated test example, see udpbwtest.py.
 from mininet.cli import CLI
 from mininet.log import info, output
 from mininet.net import Mininet
-from mininet.topolib import SingleSwitchTopo
+from mininet.topo import SingleSwitchTopo
 
 def ifconfigTest( net ):
     "Run ifconfig on all hosts in net."
