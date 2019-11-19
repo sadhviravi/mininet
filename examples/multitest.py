@@ -15,7 +15,7 @@ def ifconfigTest( net ):
     hosts = net.hosts
     for host in hosts:
         output(host.cmd( 'ifconfig' ))
-    
+
 if __name__ == '__main__':
     info( "*** Creating network\n" )
     #network = Mininet( TreeTopo( depth=2, fanout=2 ), ipBase= "100.0.0.0/24")
