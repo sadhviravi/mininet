@@ -16,7 +16,7 @@ def ifconfigTest( net ):
     switches = net.switches
     for host in hosts:
         output( host.cmd( 'ifconfig' ) )
-    net.delLinkBetween(hosts[0],switches[0])
+    net.delLinkBetween( hosts[0], switches[0] )
 
 if __name__ == '__main__':
 #    lg.setLogLevel( 'info' )
