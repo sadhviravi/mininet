@@ -13,8 +13,10 @@ from mininet.topolib import TreeTopo
 def ifconfigTest( net ):
     "Run ifconfig on all hosts in net."
     hosts = net.hosts
+    switches = net.switches
     for host in hosts:
         output( host.cmd( 'ifconfig' ) )
+    delLinkBetween(hosts[0],switches[0])
 
 if __name__ == '__main__':
 #    lg.setLogLevel( 'info' )
@@ -25,13 +27,11 @@ if __name__ == '__main__':
      #                 , switch=OVSKernelSwitch )
     info( "*** Starting network\n" )
     network.start()
-    ifconfigTest( network )
     info( "*** Running ping test\n" )
     network.pingAll()
     info( "*** Running ifconfig test\n" )
-   # ifconfigTest( network )
+    ifconfigTest( network )
     info( "*** Starting CLI (type 'exit' to exit)\n" )
-    output(network.delLink('h1s1'))
     network.pingAll()
     CLI( network )
     info( "*** Stopping network\n" )
