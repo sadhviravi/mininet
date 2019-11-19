@@ -6,7 +6,7 @@ For a more complicated test example, see udpbwtest.py.
 """
 
 from mininet.cli import CLI
-from mininet.log import info
+from mininet.log import info, output
 from mininet.net import Mininet
 from mininet.topolib import TreeTopo
 
@@ -14,7 +14,7 @@ def ifconfigTest( net ):
     "Run ifconfig on all hosts in net."
     hosts = net.hosts
     for host in hosts:
-        info( host.cmd( 'ifconfig' ) )
+        output( host.cmd( 'ifconfig' ) )
 
 if __name__ == '__main__':
 #    lg.setLogLevel( 'info' )
