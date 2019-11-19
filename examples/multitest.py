@@ -29,6 +29,7 @@ if __name__ == '__main__':
     network.start()
     info( "*** Running ping test\n" )
     network.pingAll()
+    network.iperf()
     info( "*** Running ifconfig test\n" )
    # ifconfigTest( network )
     info( "*** Starting CLI (type 'exit' to exit)\n" )
