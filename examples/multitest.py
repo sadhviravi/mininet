@@ -16,7 +16,7 @@ def ifconfigTest( net ):
     switches = net.switches
     for host in hosts:
         output( host.cmd( 'ifconfig' ) )
-    output(net.linksBetween( hosts[0], switches[0] ))
+    output(net.linksBetween(hosts[0], switches[0] ))
     #net.delLink( hosts[0], switches[0] )
 
 if __name__ == '__main__':
